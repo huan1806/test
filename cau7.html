@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Đăng ký ngành học</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+.success {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #dff0d8;
+    color: #3c763d;
+    display: none;
+}
+</style>
+</head>
+<body>
+<h2>ĐĂNG KÝ NGÀNH HỌC</h2>
+<form onsubmit="dangKy(); return false;">
+  <p> Tên đăng nhập (*):
+    <input type="text" id="username" value="SV001" required>
+  </p>
+  <p> Mật khẩu (*):
+    1 </p>
+  <p> Email:
+    <input type="email" id="email" value="phamducanh@ptit.com">
+  </p>
+  <p> Giới tính (*):
+    <input type="radio" name="gender" checked>
+    Nam
+    <input type="radio" name="gender">
+    Nữ
+    <input type="radio" name="gender">
+    Khác </p>
+  <p> Sở thích:
+    <input type="checkbox" checked>
+    Lập trình
+    <input type="checkbox">
+    Thể thao
+    <input type="checkbox">
+    Âm nhạc </p>
+  <p> Chọn ngành học (*):
+    <select id="nganh">
+      <option>Kỹ thuật phần mềm</option>
+      <option>Hệ thống thông tin</option>
+      <option>An toàn thông tin</option>
+      <option>Trí tuệ nhân tạo</option>
+    </select>
+  </p>
+  <p>
+    <input type="submit" value="Đăng ký">
+  </p>
+</form>
+<div id="thongbao" class="success"> 🎉 Chúc mừng <b id="ten"></b>! Bạn đã đăng ký ngành: <b id="nganhhoc"></b> </div>
+<script>
+        function dangKy() {
+            var tenDangNhap = document.getElementById("username").value;
+            var nganh = document.getElementById("nganh").value;
+
+            document.getElementById("ten").innerText = tenDangNhap;
+            document.getElementById("nganhhoc").innerText = nganh;
+            document.getElementById("thongbao").style.display = "block";
+        }
+    </script>
+</body>
+</html>

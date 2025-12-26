@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giới thiệu bản thân</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-top: 40px;
+        }
+
+        h2 {
+            margin-top: 10px;
+            font-size: 28px;
+        }
+
+        p {
+            width: 70%;
+            margin: 20px auto;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        h3 {
+            margin-top: 40px;
+            font-size: 30px;
+        }
+
+        .sothich {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .item {
+            margin: 0 15px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+
+    <script>
+        function doiMau(e) {
+			if (e.style.color === "white") {
+				e.style.color = "black";
+            	e.style.backgroundColor = "white";	
+			} else {
+				e.style.color = "white";
+            	e.style.backgroundColor = "#0d6efd";
+			}
+
+        }
+    </script>
+</head>
+<body>
+
+<h1>Nguyễn Văn A</h1>
+<h2>Nghề nghiệp: Lập trình viên</h2>
+
+<p>
+    Tôi là một lập trình viên đam mê sáng tạo và học hỏi. Với hơn 3 năm kinh nghiệm
+    trong lĩnh vực phát triển web, tôi luôn tìm kiếm những thách thức mới để phát
+    triển bản thân và tạo ra những sản phẩm chất lượng.
+</p>
+
+<h3>Sở thích</h3>
+
+<div class="sothich">
+    <div class="item" onclick="doiMau(this)">Học tập và nghiên cứu</div>
+    <div class="item" onclick="doiMau(this)">Chơi thể thao</div>
+    <div class="item" onclick="doiMau(this)">Nghe nhạc, xem phim</div>
+    <div class="item" onclick="doiMau(this)">Du lịch và khám phá</div>
+</div>
+
+</body>
+</html>
